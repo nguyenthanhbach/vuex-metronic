@@ -1,0 +1,4 @@
+Page Method call function on method();
+this function will dispatch to function of action  on  file store.js
+function of action after doing something will emit data to state on file store.js
+on component, get data return from emit by ...mapState(['state attribute']) on computed function
