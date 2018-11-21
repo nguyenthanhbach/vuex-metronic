@@ -1,9 +1,24 @@
 <template>
-<div>
-    <b-table striped hover :items="items" :fields="fields"></b-table>
-    <b-pagination-nav align="right" :number-of-pages="10" v-model="currentPage" />
-    <div>currentPage: {{currentPage}}</div>
-</div>
+    <div>
+
+        <div class="m-portlet m-portlet--mobile">
+            <div class="m-portlet__head">
+                <div class="m-portlet__head-caption">
+                    <div class="m-portlet__head-title">
+                        <h3 class="m-portlet__head-text">
+                            Basic Table
+                            <small>data loaded from remote data source</small>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="m-portlet__body">
+                <b-table striped hover :items="items" :fields="fields"></b-table>
+                <b-pagination-nav align="right" :number-of-pages="10" v-model="currentPage" />
+                <div>currentPage: {{currentPage}}</div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>

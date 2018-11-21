@@ -9,5 +9,6 @@ export default {
 		ADMIN_ABOUT: '/admin/about',
 		ADMIN_EXAMPLE_TABLE_BASIC: '/admin/example/table/basic',
 		ADMIN_EXAMPLE_TABLE_MY_TABLE: '/admin/example/table/my-table',
+		ADMIN_EXAMPLE_AUTH_LOGIN: '/admin/example/auth/login',
 	}
 }
