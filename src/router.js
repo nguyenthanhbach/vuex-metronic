@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
+import NProgress from 'nprogress'
 Vue.use(Router)
 import config from "@source/config/index";
 import Home from '@source/pages/home/home';
@@ -17,7 +17,7 @@ import ExampleTableMyTable from '@source/pages/example/table/my-table';
 import Login from '@source/pages/example/auth/login';
 
 
-const router = [
+const listRouter = [
 	{
 		path: '/',
 		name: 'main-dashboard',
@@ -94,8 +94,21 @@ const router = [
 ]
 
 
-export default new Router({
+const router = new Router({
 	//mode: 'history',
-	routes: router
+	routes: listRouter
 });
-
+router.beforeResolve((to, from, next) => {
+	// If this isn't an initial page load.
+	if (to.name) {
+		// Start the route progress bar.
+		NProgress.start()
+	}
+	next()
+  })
+  
+  router.afterEach((to, from) => {
+	// Complete the animation of the route progress bar.
+	NProgress.done()
+  })
+export default router

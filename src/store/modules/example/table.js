@@ -11,7 +11,7 @@ const actions = {
 	async fetch(context, currentPage) {
 		let data = await tableExampleApi.getAll(currentPage); 
 		if(data.data){
-			let dataRespon = data;
+			let dataRespon = data.data;
 			context.commit(types.ADMIN_EXAMPLE_LIST_DATA_TABLE_VUE_BOOTSTRAPETCH_SUCCESS, dataRespon);
 		}
 	},

@@ -84,19 +84,22 @@
 		</div>
 		<!-- end:: Page -->
         </div>
+		
     </div>
-    
 </template>
 <script>
     import Menu from './menu';
 	import Header from './header';
 	import Subheader from './sub-header'
+	
+
 	export default {
         name: 'main-master',
         components:{
             'main-menu': Menu,
 			'main-header': Header,
-			'sub-header': Subheader
+			'sub-header': Subheader,
+		
         },
 		data:  function()  {
 			return {
